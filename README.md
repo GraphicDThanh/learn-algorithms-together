@@ -7,9 +7,11 @@ Your job is to fork this repo to your GitHub account.
 
 Create a file name `<your-name>.md` inside the `session<x>/week<y>/` folder of the week
 
-In `<your-name>.md`, add following format:
+In `<your-name>.md`, add following format(in markdown):
 
 ---
+
+``````
 
 ## Easy([35. Search Insert Position](https://leetcode.com/problems/search-insert-position/))
 
@@ -34,6 +36,7 @@ Code:
 ```python
 (code)
 ```
+``````
 
 After done, create a PR to [our repo](https://github.com/GraphicDThanh/learn-algorithms-together) with:
 
