@@ -34,7 +34,10 @@ class Solution:
   - the left will start with 1, the right will start with n
   - the middle will start with left + (right - left) / 2
   - the coins need to fill from left to right = left * (right + 1) / 2
-  
+- Condition:
+  - if the needed coins > n then move right to middle -1
+  - if the needed coins is <= n, move left to m, update the answer fill rows to m
+  - Repeat until left > right
 
 Analysis:
 - Time complexity: O(logn)
