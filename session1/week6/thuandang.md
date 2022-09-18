@@ -1,12 +1,12 @@
-## Easy([4121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/))
+## Easy([1859. Sorting the Sentence](https://leetcode.com/problems/sorting-the-sentence/))
 
 **Solution:**
 
 Explanation:
 
-- Use for ... of to iterate over the values ​​in the provided array
-- Use 2 variables minPrice and currentPrice for comparison condition
-- The Match.max function will find the maximum value and will return the profit value
+- Use the split method to create an array containing the separate words of the previous jumbled sentence
+- Use the sort function to compare words with the available index in the word
+- Use map function in combination with splice(first index position + length - 1)th position to remove redundant indexes in words and use join function to split words in array
 
 **Analysis:**
 
@@ -17,9 +17,9 @@ Submission Detail
 
 ```
 Status: Accepted
-211 / 211 test cases passed.
-Runtime: 99 ms
-Memory Usage: 51.7 MB
+45 / 45 test cases passed.
+Runtime: 110 ms
+Memory Usage: 43.2 MB
 ```
 
 Code:
@@ -28,7 +28,7 @@ Code:
 /**
  *
  * @param sentence is arrays of a list of words
- * @returns maximum value of profit
+ * @returns a original sentence
  */
  const sortSentence = (sentence: string): string =>
 sentence
