@@ -46,3 +46,44 @@ function getRow(rowIndex:number): number[] {
     return array;
 };
 ```
+
+## Hard ([1424. Diagonal Traverse II](https://leetcode.com/problems/diagonal-traverse-ii/))
+
+**Solution:**
+
+- Find x, y is following the columns and rows of the matrix
+- The total number of diagonals will be `x + y - 1`
+- Loop from `1` to `x + y - 1` to generate every diagonal of the matrix
+- Use 2 loop to generate diagonal
+
+**Analysis:**
+
+Submission Detail
+
+```
+Status: Time Limit Exceeded
+53 / 56 test cases passed
+Runtime: N/A
+Memory Usage: N/A
+```
+
+Code:
+
+```TypeScript
+  function findDiagonalOrder(nums: number[][]) {
+    const result = [];
+    const lengths = nums.map((a) => a.length);
+    const y = nums.length;
+    const x = nums[lengths.indexOf(Math.max(...lengths))].length;
+
+    for (let k = 0; k < (x + y -1); k += 1) {
+        for (let i = k; i >= 0; i -= 1) {
+            if(nums[i] && nums[i][k-i]) {
+                result.push(nums[i][k-i])
+            }
+        }
+    }
+
+    return result
+  }
+```
