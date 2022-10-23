@@ -10,7 +10,7 @@
         -> reduce n
     - if value at n smaller than value at m 
         -> the last item value = value at m
-        -> reduce n
+        -> reduce m
     - reduce last index to continue the check
     
 **Analysis:**
